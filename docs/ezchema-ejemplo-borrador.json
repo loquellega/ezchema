@@ -1,0 +1,591 @@
+{
+ "format": "ezchema",
+ "v": 4,
+ "project": {
+  "nombre": "Ecos del agua",
+  "compania": "Landscape Artes Escénicas",
+  "disenador": "Héctor Cruz Juárez",
+  "venue": "Teatro de la Ciudad",
+  "fecha": "2026-11-20",
+  "version": "borrador 1",
+  "contacto": "",
+  "descripcion": "Proyección frontal sobre ciclorama y TV CRT en escena con cámara en vivo. Operación desde cabina con Isadora.",
+  "logo": ""
+ },
+ "theme": "claro",
+ "scale": 50,
+ "cardScale": 1,
+ "paper": {
+  "size": "carta",
+  "orient": "v"
+ },
+ "legend": true,
+ "layers": [
+  {
+   "id": "L1",
+   "name": "General",
+   "vis": true,
+   "lock": false,
+   "op": 100
+  }
+ ],
+ "activeLayer": "L1",
+ "versions": [],
+ "pages": [
+  {
+   "id": "pg1",
+   "size": "carta",
+   "orient": "v",
+   "title": "Hoja 1 · Señal",
+   "x": -40,
+   "y": -60
+  },
+  {
+   "id": "pg2",
+   "size": "carta",
+   "orient": "v",
+   "title": "Hoja 2 · Planta",
+   "x": 900,
+   "y": -60
+  }
+ ],
+ "nodes": [
+  {
+   "id": "n-nota",
+   "key": "note",
+   "cls": "note",
+   "t": "note",
+   "x": 20,
+   "y": -10,
+   "label": "Caja de texto",
+   "text": "# Ecos del agua\nDispositivo de borrador generado desde el análisis del texto.\n- Proyección frontal sobre ciclorama\n- TV CRT en escena con la cámara en vivo\n- Prólogo · loop de imágenes del agua, ciclorama",
+   "w": 520,
+   "fs": 12.5,
+   "align": "left",
+   "fill": "#ffffff",
+   "fillOp": 0,
+   "stroke": "#141517",
+   "strokeOp": 0,
+   "sw": 1,
+   "model": "",
+   "qty": 1,
+   "provee": "",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "layer": "L1"
+  },
+  {
+   "id": "n-cyc",
+   "key": "cyc",
+   "cls": "surface",
+   "t": "cyc",
+   "x": 20,
+   "y": 120,
+   "label": "Ciclorama",
+   "mat": "Ciclorama blanco",
+   "sw": 10,
+   "sh": 5,
+   "model": "",
+   "qty": 1,
+   "provee": "Teatro / venue",
+   "notes": "",
+   "url": "",
+   "ins": [
+    "Proyección"
+   ],
+   "outs": [],
+   "layer": "L1"
+  },
+  {
+   "id": "n-tvc",
+   "key": "tv-crt",
+   "cls": "device",
+   "t": "crt",
+   "x": 380,
+   "y": 120,
+   "label": "TV en escena",
+   "model": "",
+   "qty": 1,
+   "provee": "Producción",
+   "notes": "",
+   "url": "",
+   "ins": [
+    "Video compuesto (RCA)"
+   ],
+   "outs": [],
+   "layer": "L1",
+   "link3": "n-tvp"
+  },
+  {
+   "id": "n-pry",
+   "key": "proj-std",
+   "cls": "device",
+   "t": "projector",
+   "x": 20,
+   "y": 260,
+   "label": "Proyector frontal",
+   "model": "",
+   "qty": 1,
+   "provee": "Renta",
+   "notes": "",
+   "url": "",
+   "lens": "std",
+   "trMin": 1.4,
+   "trMax": 2.2,
+   "lm": 7000,
+   "ins": [
+    "HDMI"
+   ],
+   "outs": [
+    "Lente"
+   ],
+   "layer": "L1"
+  },
+  {
+   "id": "n-cam",
+   "key": "dvcam",
+   "cls": "device",
+   "t": "anacam",
+   "x": 380,
+   "y": 260,
+   "label": "Cámara MiniDV",
+   "model": "Sony Handycam",
+   "qty": 1,
+   "provee": "Producción",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [
+    "Video compuesto"
+   ],
+   "layer": "L1"
+  },
+  {
+   "id": "n-cap",
+   "key": "anacapture",
+   "cls": "device",
+   "t": "capture",
+   "x": 380,
+   "y": 400,
+   "label": "Capturadora análoga",
+   "model": "",
+   "qty": 1,
+   "provee": "Producción",
+   "notes": "",
+   "url": "",
+   "ins": [
+    "Video compuesto"
+   ],
+   "outs": [
+    "USB"
+   ],
+   "layer": "L1"
+  },
+  {
+   "id": "n-h2r",
+   "key": "hdmi2rca",
+   "cls": "device",
+   "t": "converter",
+   "x": 20,
+   "y": 400,
+   "label": "Conversor HDMI a RCA",
+   "model": "",
+   "qty": 1,
+   "provee": "Producción",
+   "notes": "",
+   "url": "",
+   "ins": [
+    "HDMI"
+   ],
+   "outs": [
+    "Video compuesto"
+   ],
+   "layer": "L1"
+  },
+  {
+   "id": "n-lap",
+   "key": "laptop",
+   "cls": "device",
+   "t": "laptop",
+   "x": 200,
+   "y": 540,
+   "label": "Operación de video",
+   "model": "MacBook Pro",
+   "qty": 1,
+   "provee": "Producción",
+   "notes": "",
+   "url": "",
+   "ins": [
+    "USB 1"
+   ],
+   "outs": [
+    "HDMI",
+    "HDMI 2"
+   ],
+   "layer": "L1"
+  },
+  {
+   "id": "n-isa",
+   "key": "sw-isadora",
+   "cls": "software",
+   "t": "software",
+   "x": 470,
+   "y": 540,
+   "label": "Isadora",
+   "model": "Isadora 3",
+   "qty": 1,
+   "provee": "Producción",
+   "notes": "",
+   "url": "https://troikatronix.com",
+   "ins": [],
+   "outs": [],
+   "layer": "L1"
+  },
+  {
+   "id": "n-ext",
+   "key": "e-multi",
+   "cls": "device",
+   "t": "strip",
+   "x": 20,
+   "y": 680,
+   "label": "Multicontacto cabina",
+   "model": "",
+   "qty": 1,
+   "provee": "Teatro / venue",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [
+    "Contacto 1"
+   ],
+   "layer": "L1"
+  },
+  {
+   "id": "n-op",
+   "key": "op-video",
+   "cls": "person",
+   "t": "person",
+   "x": 300,
+   "y": 700,
+   "label": "Operador de video",
+   "model": "",
+   "qty": 1,
+   "provee": "",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "layer": "L1"
+  },
+  {
+   "id": "s-esc",
+   "key": "sp-stage",
+   "cls": "shape",
+   "t": "shrect",
+   "x": 1050,
+   "y": 40,
+   "label": "Escenario",
+   "shape": "rect",
+   "w": 500,
+   "h": 400,
+   "sides": 6,
+   "fill": "#141517",
+   "fillOp": 7,
+   "stroke": "#141517",
+   "strokeOp": 70,
+   "sw": 1.5,
+   "dash": false,
+   "head": "none",
+   "dim": false,
+   "text": "Escenario",
+   "fs": 13,
+   "tc": "#60666E",
+   "model": "",
+   "qty": 1,
+   "provee": "",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "layer": "L1",
+   "noList": true
+  },
+  {
+   "id": "s-cyc",
+   "key": "sh-line",
+   "cls": "shape",
+   "t": "shline",
+   "x": 1060,
+   "y": 50,
+   "label": "Ciclorama (planta)",
+   "shape": "line",
+   "w": 480,
+   "h": 0,
+   "sides": 6,
+   "fill": "#141517",
+   "fillOp": 0,
+   "stroke": "#141517",
+   "strokeOp": 85,
+   "sw": 2,
+   "dash": false,
+   "head": "none",
+   "dim": false,
+   "text": "Ciclorama",
+   "fs": 13,
+   "tc": "#141517",
+   "m3": "muro",
+   "z3": 0,
+   "h3": 5,
+   "model": "",
+   "qty": 1,
+   "provee": "",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "layer": "L1",
+   "noList": true
+  },
+  {
+   "id": "n-bpl",
+   "key": "beamer",
+   "cls": "beamer",
+   "t": "beamer",
+   "x": 1300,
+   "y": 640,
+   "label": "Proyector frontal",
+   "model": "",
+   "qty": 1,
+   "provee": "",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "noList": true,
+   "lens": "std",
+   "trMin": 1.4,
+   "trMax": 2.2,
+   "zoom": 50,
+   "lm": 7000,
+   "dist": 11.5,
+   "ang": 0,
+   "bw": 0.5,
+   "bd": 0.45,
+   "aspect": "16:9",
+   "h3": 2.2,
+   "tilt": 0,
+   "lsv": 20,
+   "lsh": 0,
+   "layer": "L1"
+  },
+  {
+   "id": "n-tvp",
+   "key": "d-crt",
+   "cls": "disp",
+   "t": "tv",
+   "x": 1130,
+   "y": 330,
+   "label": "TV en escena",
+   "model": "",
+   "qty": 1,
+   "provee": "",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "dt": "crt",
+   "z3": 0.75,
+   "nits": 150,
+   "watts": 90,
+   "diag": 21,
+   "aspect": "4:3",
+   "res": "640×480",
+   "fx": true,
+   "ang": 0,
+   "src3": "patron",
+   "link": "n-tvc",
+   "noList": true,
+   "layer": "L1"
+  },
+  {
+   "id": "f-1",
+   "key": "f-mujer2",
+   "cls": "fig",
+   "t": "fig",
+   "x": 1250,
+   "y": 260,
+   "label": "Intérprete",
+   "fk": "mujer",
+   "alt": 1.65,
+   "ang": 0,
+   "noList": true,
+   "model": "",
+   "qty": 1,
+   "provee": "",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "layer": "L1"
+  },
+  {
+   "id": "f-2",
+   "key": "f-hombre",
+   "cls": "fig",
+   "t": "fig",
+   "x": 1360,
+   "y": 280,
+   "label": "",
+   "fk": "hombre",
+   "alt": 1.7,
+   "ang": 0,
+   "noList": true,
+   "model": "",
+   "qty": 1,
+   "provee": "",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "layer": "L1"
+  },
+  {
+   "id": "l-1",
+   "key": "l-leko26",
+   "cls": "lum",
+   "t": "lleko",
+   "x": 1200,
+   "y": 480,
+   "label": "Leko 26°",
+   "model": "",
+   "qty": 1,
+   "provee": "Teatro / venue",
+   "notes": "",
+   "url": "",
+   "ins": [],
+   "outs": [],
+   "lt": "leko",
+   "angMin": 26,
+   "angMax": 26,
+   "zoom": 50,
+   "watts": 575,
+   "led": false,
+   "modo": 1,
+   "canal": 1,
+   "univ": 1,
+   "addr": 1,
+   "color": "L201",
+   "gobo": "",
+   "pos": "Vara 1",
+   "prop": "Frontal intérprete",
+   "alt": 6,
+   "foco": 1.5,
+   "dist": 4,
+   "ang": 0,
+   "beam": true,
+   "plens": "",
+   "layer": "L1"
+  }
+ ],
+ "cables": [
+  {
+   "id": "c1",
+   "a": {
+    "n": "n-lap",
+    "s": "out",
+    "i": 0
+   },
+   "b": {
+    "n": "n-pry",
+    "s": "in",
+    "i": 0
+   },
+   "label": "",
+   "len": 30,
+   "provee": "Producción"
+  },
+  {
+   "id": "c2",
+   "a": {
+    "n": "n-pry",
+    "s": "out",
+    "i": 0
+   },
+   "b": {
+    "n": "n-cyc",
+    "s": "in",
+    "i": 0
+   },
+   "label": "",
+   "len": "",
+   "provee": "",
+   "dist": 11.5
+  },
+  {
+   "id": "c3",
+   "a": {
+    "n": "n-cam",
+    "s": "out",
+    "i": 0
+   },
+   "b": {
+    "n": "n-cap",
+    "s": "in",
+    "i": 0
+   },
+   "label": "RCA",
+   "len": 15,
+   "provee": "Producción"
+  },
+  {
+   "id": "c4",
+   "a": {
+    "n": "n-cap",
+    "s": "out",
+    "i": 0
+   },
+   "b": {
+    "n": "n-lap",
+    "s": "in",
+    "i": 0
+   },
+   "label": "",
+   "len": 2,
+   "provee": "Producción"
+  },
+  {
+   "id": "c5",
+   "a": {
+    "n": "n-lap",
+    "s": "out",
+    "i": 1
+   },
+   "b": {
+    "n": "n-h2r",
+    "s": "in",
+    "i": 0
+   },
+   "label": "",
+   "len": 2,
+   "provee": "Producción"
+  },
+  {
+   "id": "c6",
+   "a": {
+    "n": "n-h2r",
+    "s": "out",
+    "i": 0
+   },
+   "b": {
+    "n": "n-tvc",
+    "s": "in",
+    "i": 0
+   },
+   "label": "RCA",
+   "len": 20,
+   "provee": "Producción"
+  }
+ ]
+}

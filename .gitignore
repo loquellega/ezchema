@@ -1,0 +1,9 @@
+# Datos y configuración del servidor privado (nunca al repositorio)
+servidor/config.php
+servidor/datos/*
+!servidor/datos/index.html
+!servidor/datos/.htaccess
+# Sistema y trabajo
+.DS_Store
+node_modules/
+*.zip

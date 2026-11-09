@@ -1,0 +1,46 @@
+EZCHEMA · GUARDADO PRIVADO EN TU SERVIDOR
+==========================================
+Permite guardar y abrir proyectos de Ezchema directamente en tu hosting,
+protegidos con contraseña. Es un menú oculto: no aparece en la interfaz.
+
+Requisitos
+  Hosting con PHP 7.4 o más reciente (cPanel compartido funciona).
+  Conviene tener HTTPS (candado) en el dominio.
+
+Instalación (una sola vez)
+  1. Sube la carpeta completa de Ezchema a tu sitio, por ejemplo a
+     public_html/ezchema/ (index.html y la carpeta servidor/ juntas).
+  2. En el navegador abre:  https://tudominio.com/ezchema/servidor/setup.php
+     Elige una contraseña de al menos 10 caracteres y guarda.
+  3. En el Administrador de archivos de cPanel, BORRA servidor/setup.php.
+  4. Revisa que estos archivos ocultos se hayan subido (en el
+     Administrador de archivos, activa "Mostrar archivos ocultos"):
+       servidor/.htaccess         (protege config.php)
+       servidor/datos/.htaccess   (impide descargar los proyectos)
+
+Uso
+  Abre Ezchema desde tu sitio y usa el menú oculto:
+    Computadora:  Ctrl + Alt + S   (en Mac: Cmd + Opción + S)
+    iPad:         mantén presionado el logo EZCHEMA 2 segundos
+    Directo:      agrega #servidor al final de la dirección
+  Escribe la contraseña (puedes marcar "Recordar en este equipo").
+    Guardar este proyecto   actualiza el mismo proyecto en el servidor.
+    Guardar como copia      crea uno nuevo.
+    Abrir / Borrar          desde la lista.
+
+Respaldos
+  Cada vez que guardas, la versión anterior se copia a
+  servidor/datos/respaldos/ (se conservan las 20 más recientes por
+  proyecto). Al borrar un proyecto, también queda una copia ahí.
+
+Seguridad
+  La contraseña se guarda cifrada en servidor/config.php.
+  Tras 8 intentos fallidos, esa conexión se bloquea 15 minutos.
+  Para cambiar la contraseña: borra servidor/config.php, vuelve a subir
+  setup.php, ábrelo y repite los pasos 2 y 3.
+  Si usas "Recordar en este equipo", la contraseña queda guardada en ese
+  navegador: úsalo solo en tus equipos.
+
+Nota
+  El guardado en servidor funciona cuando Ezchema se abre desde tu
+  sitio. Desde la vista publicada en Claude no puede conectarse.

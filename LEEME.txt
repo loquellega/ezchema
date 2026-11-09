@@ -1,0 +1,123 @@
+EZCHEMA v0.41
+=============
+Maquetador de diagramas de montaje y señal para proyectos multimedia
+escénicos. Colección Alchemy of Meaning (Alquimia del Significado).
+Héctor Cruz Juárez | hectorcruz.com.mx
+
+Contenido
+  index.html             La aplicación completa en un solo archivo. Incluye
+                         el ícono, el manual y las librerías de PDF;
+                         funciona sin internet. La Previz carga su
+                         motor (three.js) de internet al abrirla.
+  ezchema-manual.pdf     Manual de uso (16 capítulos, con glosario). También se abre desde
+                         la app: botón "Acerca de", "Ver manual".
+  apple-touch-icon.png   Ícono de la app (180 x 180).
+  icon-512.png           Ícono en alta resolución, para GitHub y difusión.
+  icon.svg               Ícono en vectores.
+  author-logo.svg        Logo de autor (marcador de posición, por reemplazar).
+  LICENSE                Texto completo de la licencia GPL-3.0.
+  README.md              Presentación del proyecto para GitHub.
+  LEEME.txt              Este archivo.
+  servidor/              Guardado privado en tu hosting (ver
+                         servidor/LEEME-servidor.txt).
+
+Uso sin conexión
+  Abre index.html con doble clic en cualquier navegador moderno.
+  Todo funciona sin internet salvo la Previz (vista 3D).
+
+Previz, vista 3D (nuevo en v0.30–v0.41)
+  Botones "Esquema | Previz" en la barra: cambian entre la planta y la
+  previsualización 3D. Lee la planta: proyectores en planta,
+  luminarias y formas del boceto. En el inspector de cada forma eliges
+  si se ve como superficie en el piso, volumen o muro/pantalla; en el
+  proyector, la altura de la lente, la inclinación y el lens shift.
+  Clic selecciona; el gizmo mueve (W), gira (E) o escala (R) el objeto
+  directo en 3D, con imán de 5 cm y 5° (Mayús lo desactiva). Todo cambio
+  se escribe en la planta y se puede deshacer.
+  Rectángulos, círculos y polígonos se giran también en planta: asa
+  redonda sobre la forma (pasos de 15°, Mayús libre), campo "Rotación"
+  y botones de 90° en el inspector. Líneas y formas libres se giran con
+  el gizmo 3D.
+  Contenido proyectado: en el inspector del proyector en planta elige
+  Patrón de prueba, Imagen o Video. La imagen se guarda con el proyecto
+  (reducida a 2048 px). El video corre en loop y no se guarda: al reabrir
+  el proyecto hay que volver a cargarlo (MP4 H.264 funciona en todos los
+  navegadores). "Editar esquinas" (o "Esquinas" en la barra de Previz)
+  abre una ventana flotante que puedes mover y cambiar de tamaño:
+  deformas la imagen mientras ves el resultado en vivo. "Desde
+  proyector" pone la cámara en la lente.
+  Estilos: Boceto, Mapping, Sala y Render. El botón "Luz" ajusta la luz
+  de sala, la exposición, la intensidad del mapping y si las luminarias
+  iluminan la escena (Sala y Render, hasta 16, por watts y ángulo).
+  Pantallas emisoras (en el buscador, "… en planta"): TV de tubo CRT,
+  pantalla plana, monitor de piso, tablet o teléfono, muro LED y muro LED
+  curvo. Van a escala en la planta, entran a la lista técnica (tamaño,
+  resolución, nits, consumo) y en la Previz emiten su propia imagen o
+  video con el mismo sistema de contenido y esquinas de los proyectores.
+  Una pantalla en planta se vincula con su tarjeta del diagrama de señal
+  ("Agregar al diagrama de señal", o desde la tarjeta "Colocar en planta
+  y previz"): la tarjeta lleva los puertos y la lista la cuenta una vez.
+  Figuras de escala (mujer 1.60 / 1.65 m, hombre 1.70 / 1.75 m, niña,
+  niño y grupo): estatura ajustable, reciben la proyección en la Previz
+  y no entran a la lista técnica.
+
+Equipo análogo y energía (nuevo en v0.37)
+  TV de tubo CRT y monitor de circuito cerrado, cámara DV / MiniDV,
+  cámara de circuito cerrado análoga, DVR, divisor cuádruple,
+  reproductor VHS o DVD, conversores VGA a RCA y HDMI a RCA.
+  Nuevo tipo de señal "Corriente eléctrica": toma de pared, extensión,
+  multicontacto, regulador o no-break y eliminador de 12 V. Los cables
+  de corriente entran a la lista con su longitud.
+  "Capturar" pone la vista en el lienzo; "En hoja nueva" crea una hoja con
+  ella. Una captura guarda su cámara: "Actualizar captura" en su
+  inspector la rehace con el modelo actual.
+
+Uso en línea
+  Sube la carpeta completa a tu sitio (por ejemplo
+  https://tudominio.com/ezchema/) o a un repositorio de GitHub con
+  GitHub Pages. Conviene servirlo por HTTPS.
+
+Instalar como app en iPad o iPhone
+  1. Abre la dirección en Safari.
+  2. Toca Compartir y elige "Agregar a pantalla de inicio".
+  3. Ábrela desde su ícono: pantalla completa, sin la barra de Safari.
+  Nota: la app instalada guarda sus proyectos por separado de Safari.
+  Usa Guardar (.json) para pasar proyectos de uno a otro.
+
+Proyectos de versiones anteriores
+  Los proyectos guardados con Flujo AV o versiones previas de Ezchema se
+  abren sin problema. Al abrirlos se quitan los puertos que no tenían
+  conexión: desde la v0.12 los puertos se crean al conectar.
+
+Idioma
+  Botones ES / EN en el menú. Interfaz en español de México e inglés.
+
+Licencia
+  Software libre bajo GPL-3.0. Puedes usarlo, estudiarlo, modificarlo y
+  compartirlo; las versiones derivadas deben seguir siendo libres.
+  Incluye jsPDF y svg2pdf.js (licencia MIT).
+
+Historial de versiones (cada entrega lleva un número nuevo; el número
+aparece en la barra de la app, en el pie de cada hoja y en el nombre del zip)
+  v0.41  Interfaz con el estilo Alchemy UI en versión luminosa: líneas de
+         1 px, sin sombras, rótulos chicos, verde solo para lo activo y
+         deslizadores finos. El tema oscuro usa la paleta original.
+  v0.40  Casilla "Incluir glosario en la lista técnica (PDF y Word)" en
+         el inspector del proyecto (sin nada seleccionado).
+  v0.39  PDF: los textos con caracteres que las fuentes del PDF no tienen
+         (→, ≈, ✓, emoji…) se cambian por equivalentes (», ~, ok); ya no
+         se descompone la línea. La descripción sale completa en la lista.
+  v0.38  Arranque: los proyectos con pantallas o figuras abren y se
+         editan (se entregaron dos compilaciones con este número; la
+         segunda corrigió el arranque — desde aquí no se repiten números).
+  v0.37  Equipo análogo (CRT, DV, circuito cerrado, VHS, conversores RCA),
+         energía y cables de corriente, figuras de escala, vínculo entre
+         pantallas de planta y tarjetas del diagrama de señal.
+  v0.36  Pantallas emisoras en planta: CRT, plana, monitor de piso,
+         tablet, muro LED plano y curvo.
+  v0.35  Previz: modos Esquema | Previz, panel de luz, luminarias que
+         iluminan.
+  v0.34  Editor de esquinas flotante, nombre Previz.
+  v0.33  Imagen y video proyectados por proyector.
+  v0.30–v0.32  Vista 3D, gizmo, capturas y rotación de formas.
+
